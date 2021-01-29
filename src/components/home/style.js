@@ -63,7 +63,7 @@ export const HomeContainer = styled.section`
 
   .moreButton {
     margin-left: 0.5rem;
-    font-family: "Lato", sans-serif;
+    font-family: 'Patua One', sans-serif;
     font-size: 12px;
     color: ${black};
     background-color: ${primaryColor};

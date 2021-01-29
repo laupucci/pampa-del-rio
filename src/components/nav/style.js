@@ -2,6 +2,8 @@ import { colors } from "../utils";
 import styled from "styled-components";
 const {
   black,
+  whitish,
+  primaryColor
 } = colors;
 
 export const Container = styled.header`
@@ -21,5 +23,22 @@ export const Container = styled.header`
       margin-left: 1em;
       width: 90px
     }
-
+    .menu{
+      display:flex;
+      flex-direction: 'row';
+      margin-right: 2.5em;
+    }
+    p{
+      color: ${whitish};
+      padding: 1em;
+      font-size: 16px;
+      font-family: 'Patua One';
+      &:hover{
+        background-color: ${primaryColor};
+        border-radius: 7px;
+      }
+    }
+    a{
+      text-decoration: none;
+    }
 `;

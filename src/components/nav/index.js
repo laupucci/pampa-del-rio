@@ -11,6 +11,18 @@ const Navbar = () => {
             <img alt="pampa" className="logo" src={logo} />
           </Link>
         <nav className="menu">
+        <Link to={`/informacion`}>
+            <p>Información</p>
+          </Link>
+        <Link to={`/nosotros`}>
+            <p>Nosotros</p>
+          </Link>
+          <Link to={`/ubicacion`}>
+            <p>Ubicación</p>
+          </Link>
+          <Link to={`/contacto`}>
+            <p>Contacto</p>
+          </Link>
         </nav>
       </Container>
   );
