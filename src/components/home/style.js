@@ -7,7 +7,7 @@ export const HomeContainer = styled.section`
   color: ${whitish};
   background: none;
   overflow: hidden;
-  height: 100vh;
+  height: 97vh;
 
 
   .bkg {
