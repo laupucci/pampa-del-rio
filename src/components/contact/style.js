@@ -10,5 +10,7 @@ export const ContactContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  font-family: 'Patua One';
+  
   `
