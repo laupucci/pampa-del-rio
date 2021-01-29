@@ -1,9 +1,15 @@
 import splash from "../../media/Splash.png";
 import styled from "styled-components";
 import { colors } from "../utils";
-const { black, whitish, primaryColor, primaryColorDarker } = colors;
+const { dark, whitish, primaryColor, primaryColorDarker } = colors;
 
 export const InformationContainer = styled.section`
-  color: ${whitish};
-  height: 97vh;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  color: ${dark};
+  font-family: 'Patua One';
+  font-size: 30px;
   `

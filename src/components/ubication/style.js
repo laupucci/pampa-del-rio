@@ -6,7 +6,7 @@ export const MapContainer = styled.section`
   color: ${whitish};
   background: none;
   overflow: hidden;
-  height: 79vh;
+  height: 78vh;
 
   justify-content:center;
   align-items:center;

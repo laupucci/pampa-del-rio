@@ -8,6 +8,7 @@ const {
 
 export const Container = styled.header`
   position: fixed;
+  top: 0;
   width: 100%;
   font-family: "Lato", sans-serif;
   padding: 2em;

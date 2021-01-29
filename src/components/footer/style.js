@@ -6,7 +6,7 @@ const {
 } = colors;
 
 export const Container = styled.header`
- 
+ bottom: 0;
   width: 100%;
   font-family: "Lato", sans-serif;
   padding: 2em;
