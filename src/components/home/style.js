@@ -1,71 +1,59 @@
 import splash from "../../media/Splash.png";
 import styled from "styled-components";
 import { colors } from "../utils";
-const { black, whitish, primaryColor, primaryColorDarker } = colors;
+const { black, whitish, primaryColor, primaryColorDarker, lightGray } = colors;
 
 export const HomeContainer = styled.section`
   color: ${whitish};
   background: none;
   overflow: hidden;
   height: 97vh;
+  background: url(${splash}) no-repeat center right fixed;
+  background-size: cover;
 
-
-  .bkg {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    background: url(${splash}) no-repeat center right;
-    background-size: cover;
-    /* filter: blur(10px); */
-  }
   .dark_blur {
     height: 100%;
     background: rgba(0, 0, 0, 0.25);
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;}
+    align-items: center;
+  }
 
-    .text{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center
+  .hero_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+
+    .hero_txt {
+      color: ${lightGray};
+
+      .title_top {
+        font-size: 3rem;
+        margin-bottom: 0;
+        line-height: 1rem;
+      }
+      .title_bottom {
+        font-size: 6rem;
+      }
     }
 
-  .hero_txt {
-      /* margin-top:100px; */
-      text-align: left;
-      margin-right:8em
+    .logo {
+      width: 20vw;
+    }
   }
 
-  .p2 {
-    font-family: 'Patua One';
-    font-size: 124px;
-    margin: 0;
-    padding: 0
+  a {
+    text-decoration: none;
   }
-  p{
-    font-family: 'Patua One';
-    font-size: 62px;
-    margin: 0
-
-  }
-
-      a {
-        text-decoration: none;
-      }
-
-      img{
-        width: 509px
-      }
 
   .moreButton {
     margin-left: 0.5rem;
-    font-family: 'Patua One', sans-serif;
+    font-family: "Sanchez", serif;
+    font-weight: bold;
     font-size: 12px;
-    color: ${black};
+    color: ${whitish};
     background-color: ${primaryColor};
     padding: 0.5rem;
     border-radius: 5px;

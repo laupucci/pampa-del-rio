@@ -1,30 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../media/logo.png";
+import logo from "../../media/logo_darkbkg.svg";
 import { HomeContainer } from "./style";
-
 
 export default function Home() {
   return (
     <div>
       <HomeContainer>
-        <div className="bkg"></div>
+        {/* <div className="bkg"></div> */}
         <div className="dark_blur">
-            <div className="text">
-          <div className="hero_txt">
-            <p>Hacé la inversión</p>
-            <p className="p2">correcta</p>
-            <Link to={`/`}>
-            <button
-              className="moreButton">
-              <div>VER MÁS</div>
-            </button>
-            </Link>
-          </div>
-          <div className="logo_container">
-            <img src={logo} alt="pampa" />
-        
-          </div>
+          <div className="hero_container">
+            <div className="hero_txt">
+              <h1 className="title_top">Hacé la inversión</h1>
+              <h1 className="title_bottom">correcta</h1>
+              <Link to={`/`}>
+                <button className="moreButton">VER MÁS</button>
+              </Link>
+            </div>
+            <img className="logo" src={logo} alt="pampa" />
           </div>
         </div>
       </HomeContainer>
