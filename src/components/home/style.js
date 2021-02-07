@@ -1,80 +1,101 @@
-import splash from "../../media/Splash.png";
+import image from "../../media/image.png";
 import styled from "styled-components";
 import { colors } from "../utils";
 const { black, whitish, primaryColor, primaryColorDarker } = colors;
 
 export const HomeContainer = styled.section`
   color: ${whitish};
-  background: none;
-  overflow: hidden;
-  height: 97vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+height: 106vh;
 
 
-  .bkg {
-    height: 100%;
+  .imagen {
+    height: 106vh;
     width: 100%;
     position: absolute;
     z-index: -1;
-    background: url(${splash}) no-repeat center right;
+    background: url(${image}) no-repeat center right;
     background-size: cover;
-    /* filter: blur(10px); */
+    
   }
-  .dark_blur {
-    height: 100%;
-    background: rgba(0, 0, 0, 0.25);
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;}
+  .pol {
+    width: 47,63px;
+    height: 19,5px;
+  }
+  .logo{
+    width: 243px;
+    height: 213,43px
+  }
 
-    .text{
+
+  .text{
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: center
+      align-items: center;
+      margin-top: 4em;
     }
 
   .hero_txt {
-      /* margin-top:100px; */
-      text-align: left;
-      margin-right:8em
+      color: #3B3228;
+      background-color: rgba(228, 228, 228, 0.6);
+      width: 550px;
+      height: 540px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+.logo_container{
+  margin: 0;
+  background-color: rgba(39, 39, 39, 0.59);
+      width: 463px;
+      height: 540px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+ .p2 {
+    font-family: 'Quando';
+    font-size: 64px;
+    color: #3B3228;
+  }
+  .p3 {
+    font-family: 'Nixie One';
+    font-size: 36px;
+    color: #3B3228;
   }
 
-  .p2 {
-    font-family: 'Patua One';
-    font-size: 124px;
-    margin: 0;
-    padding: 0
-  }
   p{
+    margin: 0;
     font-family: 'Patua One';
     font-size: 62px;
-    margin: 0
+    color: #3B3228;
 
   }
+  .more{
+    font-size: 18px;
+    font-family: 'Sanchez';
+    color: #E4E4E4
+  }
 
-      a {
-        text-decoration: none;
+  .moreI {
+    margin: 1em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        background-color: rgba(228, 228, 228, 0.3);
+        border-radius: 7px;
       }
-
-      img{
-        width: 509px
-      }
-
-  .moreButton {
-    margin-left: 0.5rem;
-    font-family: 'Patua One', sans-serif;
-    font-size: 12px;
-    color: ${black};
-    background-color: ${primaryColor};
-    padding: 0.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid ${primaryColor};
-    &:hover {
-      color: white;
-      border: 1px solid;
-      background-color: ${primaryColorDarker};
     }
-  }
+    a{
+      text-decoration: none;
+    }
 `;

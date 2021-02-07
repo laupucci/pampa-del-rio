@@ -10,30 +10,33 @@ export const Container = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  font-family: "Lato", sans-serif;
-  padding: 2em;
-  background-color: ${black};
-  height: 55px;
+  font-family: "'Julius Sans One";
+  background-color: rgba(228, 228, 228, 0.15);;
+  height: 60px;
+  padding: 3px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  font-size: 0.8rem;
 
     .logo {
-      margin-left: 1em;
-      width: 90px
+      font-size:24px;
+      font-family: 'Julius Sans One';
+      margin-left: 6em;
+      color: ${whitish};
+      padding: 1em;
     }
     .menu{
       display:flex;
       flex-direction: 'row';
-      margin-right: 2.5em;
+      margin-right: 10.7em;
     }
-    p{
+    .p2{
       color: ${whitish};
       padding: 1em;
       font-size: 16px;
-      font-family: 'Patua One';
+      font-family: 'Sanchez';
       &:hover{
         background-color: ${primaryColor};
         border-radius: 7px;

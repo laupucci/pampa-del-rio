@@ -1,16 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { UsContainer } from "./style";
-import road from "../../media/road.svg";
 
-import map from "../../media/map.svg";
-import water from "../../media/water.svg";
-import last from "../../media/last.svg";
 
 export default function Us() {
   return (
     <UsContainer>
-      <div className="info">
+      {/* <div className="info">
         <h2>Nosotros</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -41,7 +37,7 @@ export default function Us() {
             <img src={last} />
             <p className="p1">Próximamente acceso por autopista Rosario Santa Fe</p>
           </div>
-        </div>
+        </div> */}
       
     </UsContainer>
   );

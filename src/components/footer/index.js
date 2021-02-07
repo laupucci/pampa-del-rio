@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container } from "./style";
-import logo from "../../media/logo.png";
+import logo from "../../media/logo.svg";
 
 const Footer = () => {
 

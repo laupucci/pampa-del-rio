@@ -1,27 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container } from "./style";
-import logo from "../../media/logo.png";
+import logo from "../../media/logo.svg";
 
 const Navbar = () => {
 
   return (
       <Container>
           <Link to={`/`}>
-            <img alt="pampa" className="logo" src={logo} />
+            <p className="logo">Pampa del Río</p>
           </Link>
         <nav className="menu">
         <Link to={`/informacion`}>
-            <p>Información</p>
+            <p className="p2">Documentación</p>
           </Link>
         <Link to={`/nosotros`}>
-            <p>Nosotros</p>
+            <p className="p2">Nosotros</p>
           </Link>
           <Link to={`/ubicacion`}>
-            <p>Ubicación</p>
+            <p className="p2">Ubicación</p>
           </Link>
           <Link to={`/contacto`}>
-            <p>Contacto</p>
+            <p className="p2">Contacto</p>
           </Link>
         </nav>
       </Container>
