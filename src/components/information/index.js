@@ -7,8 +7,11 @@ export default function Information() {
   return (
     <div>
       <InformationContainer>
+      <div className="imagen"/>
+      <div className="container">
       <img src={tenor}/>
       <p>En construcción</p>
+      </div>
       </InformationContainer>
     </div>
   );

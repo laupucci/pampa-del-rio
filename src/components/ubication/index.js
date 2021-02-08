@@ -9,7 +9,7 @@ const mapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${MAP}`
 const Ubication = () => {
   return (
 <MapContainer>
- 
+<div className="imagen"/>
  <Map className="map"
  googleMapURL={mapUrl}
  containerElement={<div style={{height: '400px', margin: '8%'}}/>}
