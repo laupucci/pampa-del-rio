@@ -10,7 +10,7 @@ export const UsContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Sanchez';
+  font-family: "Sanchez";
   height: 100vh;
 
   .imagen {
@@ -19,7 +19,7 @@ export const UsContainer = styled.section`
     position: absolute;
     z-index: -1;
     background: url(${image}) no-repeat center right;
-    background-size: cover; 
+    background-size: cover;
   }
   .info {
     display: flex;
@@ -30,64 +30,64 @@ export const UsContainer = styled.section`
     width: 1011px;
     height: 299px;
   }
-  .desc{
-    width:60vh;
+  .desc {
+    width: 60vh;
   }
-  h2{
-    font-family: 'Quando';
+  h2 {
+    font-family: "Quando";
     font-size: 64px;
     margin-bottom: 0.5em;
     width: 3em;
   }
-  img{
+  img {
     width: 8em;
   }
   .imgs1 {
     width: 60%;
     display: flex;
-      flex-direction: row;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(161, 76, 75, 0.8);
     width: 1011px;
     height: 224px;
   }
-  p{
-    font-family: 'Sanchez';
+  p {
+    font-family: "Sanchez";
     font-size: 18px;
-    color: ${darkColor}
+    color: ${darkColor};
   }
-  .p{
+  .p {
     width: 11em;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
   }
-  .p1{
-    color: #E4E4E4;
+  .p1 {
+    color: #e4e4e4;
     font-size: 16px;
-    font-family: 'Sanchez';
+    font-family: "Sanchez";
   }
-  .imgIns{
+  .imgIns {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1.2em;
   }
-  .img1{
+  .img1 {
     width: 77.41px;
     height: 77.48px;
   }
-  .img2{
+  .img2 {
     width: 77.48px;
     height: 70.29px;
   }
-  .img3{
+  .img3 {
     width: 77.48px;
     height: 77.47px;
   }
-  .img4{
+  .img4 {
     width: 77.48px;
     height: 77.48px;
   }

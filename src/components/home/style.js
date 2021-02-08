@@ -65,7 +65,7 @@ export const HomeContainer = styled.section`
 
   .cta {
     position: absolute;
-    bottom: 0.2rem;
+    bottom: 0;
     width: 100%;
     overflow: hidden;
     padding: 0.5rem 0.5rem 0 0.5rem;
@@ -76,8 +76,6 @@ export const HomeContainer = styled.section`
     text-decoration: none;
     transition: 0.3s ease-in-out;
     &:hover {
-      /* background-color: rgba(228, 228, 228, 0.3); */
-      /* border-radius: 7px; */
       .arrow {
         transform: scale(1.5);
         margin-top: -0.4rem;
