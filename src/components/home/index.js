@@ -10,8 +10,8 @@ export default function Home() {
     <HomeContainer>
       <div className="background" />
       <div className="container">
-        <div className="text">
-          <div className="hero_txt">
+        <div className="hero_txt">
+          <div>
             <h1 className="title">
               Hacé la
               <br />
@@ -25,16 +25,14 @@ export default function Home() {
               cerca de todo
             </p>
           </div>
-          <div className="logo_container">
-            <img src={logo} className="logo" alt="Pampas del Rio" />
-          </div>
+        </div>
+        <div className="logo_container">
+          <img src={logo} className="logo" alt="Pampas del Rio" />
         </div>
       </div>
-      <Link to={`/`}>
-        <div className="cta">
-          <span className="cta_txt">VER MÁS</span>
-          <img className="arrow" src={pol} alt="poli" />
-        </div>
+      <Link className="cta" to={`/`}>
+        <span className="cta_txt">VER MÁS</span>
+        <img className="arrow" src={pol} alt="poli" />
       </Link>
     </HomeContainer>
   );

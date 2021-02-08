@@ -4,12 +4,9 @@ import { colors } from "../utils";
 const { black, whitish, primaryColor, primaryColorDarker } = colors;
 
 export const HomeContainer = styled.section`
-  color: ${whitish};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 106vh;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 
   .background {
     position: fixed;
@@ -19,79 +16,85 @@ export const HomeContainer = styled.section`
     background: url(${image}) no-repeat center right;
     background-size: cover;
   }
-  .arrow {
-    width: 47, 63px;
-    height: 19, 5px;
-  }
-  .logo {
-    width: 243px;
-    height: 213, 43px;
-  }
 
-  .text {
+  .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 4em;
+    /* margin-top: 4em; */
   }
 
   .hero_txt {
     color: #3b3228;
     background-color: rgba(228, 228, 228, 0.6);
-    width: 550px;
-    height: 540px;
+    width: 42vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .logo_container {
-    margin: 0;
-    background-color: rgba(39, 39, 39, 0.59);
-    width: 463px;
-    height: 540px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .p2 {
-    font-family: "Quando";
-    font-size: 64px;
-    color: #3b3228;
-  }
-  .p3 {
-    font-family: "Nixie One";
-    font-size: 36px;
-    color: #3b3228;
-  }
-
-  p {
-    margin: 0;
-    font-family: "Patua One";
-    font-size: 62px;
-    color: #3b3228;
-  }
-  .more {
-    font-size: 18px;
-    font-family: "Sanchez";
-    color: #e4e4e4;
-  }
-
-  .moreI {
-    margin: 1em;
-    padding: 0.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &:hover {
-      background-color: rgba(228, 228, 228, 0.3);
-      border-radius: 7px;
+    .title {
+      color: #3b3228;
+    }
+    .subtitle {
+      font-family: "Nixie One";
+      font-size: 2.25rem;
+      color: #3b3228;
     }
   }
-  a {
+
+  .logo {
+    width: 243px;
+    height: 213, 43px;
+  }
+
+  .logo_container {
+    background-color: rgba(39, 39, 39, 0.59);
+    width: 35vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta {
+    position: absolute;
+    bottom: 0.2rem;
+    width: 100%;
+    overflow: hidden;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      /* background-color: rgba(228, 228, 228, 0.3); */
+      /* border-radius: 7px; */
+      .arrow {
+        transform: scale(1.5);
+        margin-top: -0.4rem;
+      }
+    }
+
+    .cta_txt {
+      font-size: 1rem;
+      font-family: "Sanchez";
+      color: #e4e4e4;
+      transition: 0.3s ease-in-out;
+    }
+    .arrow {
+      margin-top: -0.2rem;
+      width: 2rem;
+      height: 2rem;
+      transition: 0.3s ease-in-out;
+    }
   }
 `;
