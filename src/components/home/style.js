@@ -7,6 +7,7 @@ export const HomeContainer = styled.section`
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  scroll-behavior: smooth;
 
   .background {
     position: fixed;
@@ -75,6 +76,7 @@ export const HomeContainer = styled.section`
     align-items: center;
     text-decoration: none;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
     &:hover {
       .arrow {
         transform: scale(1.5);
