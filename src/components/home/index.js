@@ -25,9 +25,9 @@ export default function Home() {
                 correcta.
               </h1>
               <p className="subtitle">
-                Lejos del ruido,
+                Lo importante está acá,
                 <br />
-                cerca de todo
+                lo demás esta cerca.
               </p>
             </div>
           </div>

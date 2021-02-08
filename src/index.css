@@ -17,6 +17,15 @@ body {
   overflow-x: hidden;
 }
 
+h1::selection {
+  background: rgba(163, 189, 49, 0.6);
+  color: #272727;
+}
+p::selection {
+  background: rgba(163, 189, 49, 0.6);
+  color: #272727;
+}
+
 h1 {
   font-family: "Quando", sans-serif;
   font-size: 4rem;
