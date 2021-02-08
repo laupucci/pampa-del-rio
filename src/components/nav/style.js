@@ -7,12 +7,14 @@ export const Container = styled.header`
   top: 0;
   width: 100%;
   font-family: "'Julius Sans One";
-  /* background-color: rgba(228, 228, 228, 0.15); */
+  background-color: ${({ active }) => (active ? "rgba(0, 0, 0, 0.5)" : "none")};
   height: 10vh;
   padding: 0 12vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 5;
+  transition: background 0.5s ease;
 
   .logo {
     font-size: 1.5rem;

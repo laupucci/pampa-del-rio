@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 import logo from "../../media/logo.svg";
 import { HomeContainer } from "./style";
 import { UsContainer } from "../us/style";
@@ -35,14 +35,20 @@ export default function Home() {
             <img src={logo} className="logo" alt="Pampas del Rio" />
           </div>
         </div>
-        <Link className="cta" to={`/`}>
+        <Link
+          to="nosotros"
+          spy={true}
+          smooth={true}
+          duration={500}
+          className="cta"
+        >
           <span className="cta_txt">VER MÁS</span>
           <img className="arrow" src={pol} alt="poli" />
         </Link>
       </HomeContainer>
 
-      <UsContainer>
-        <div className="info">
+      <UsContainer id="nosotros">
+        <div className="nosotros">
           <h2>¿Quiénes somos?</h2>
           <p className="nosotros_txt">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -53,32 +59,24 @@ export default function Home() {
             eos qui ratione voluptatem sequi nesciunt.
           </p>
         </div>
-        <div className="imgs1">
-          <div className="imgIns">
-            <img src={map} className="img1" />
-            <div className="p">
-              <p className="p1">Frente a la ruta 11</p>
-            </div>
+        <div className="caracteristicas">
+          <div className="list_item">
+            <img src={map} className="item_icon" />
+            <p className="item_txt">Ubicado frente a la ruta 11</p>
           </div>
-          <div className="imgIns">
-            <img src={dest} className="img2" />
-            <div className="p">
-              <p className="p1">A 29 minutos de la ciudad de Santa Fe</p>
-            </div>
+          <div className="list_item">
+            <img src={dest} className="item_icon" />
+            <p className="item_txt">A 29 minutos de la ciudad de Santa Fe</p>
           </div>
-          <div className="imgIns">
-            <img src={comp} className="img3" />
-            <div className="p">
-              <p className="p1">Bajada al río Coronda a 1500 metros</p>
-            </div>
+          <div className="list_item">
+            <img src={comp} className="item_icon" />
+            <p className="item_txt">Bajada al río Coronda a 1500 metros</p>
           </div>
-          <div className="imgIns">
-            <img src={turn} className="img4" />
-            <div className="p">
-              <p className="p1">
-                Próximamente acceso por autopista Rosario Santa Fe
-              </p>
-            </div>
+          <div className="list_item">
+            <img src={turn} className="item_icon" />
+            <p className="item_txt">
+              Próximamente acceso por autopista Rosario Santa Fe
+            </p>
           </div>
         </div>
       </UsContainer>

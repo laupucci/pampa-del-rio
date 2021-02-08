@@ -1,11 +1,21 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container } from "./style";
-import logo from "../../media/logo.svg";
 
 const Navbar = () => {
+  const [active, setActive] = useState(false);
+
+  const handleScroll = () => {
+    const scroll = window.scrollY;
+    if (scroll) setActive(true);
+    else if (active) setActive(false);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
   return (
-    <Container>
+    <Container active={active}>
       <Link to={`/`}>
         <p className="logo">Pampa del Río</p>
       </Link>
