@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container } from "./style";
@@ -9,10 +9,13 @@ const Navbar = () => {
   const handleScroll = () => {
     const scroll = window.scrollY;
     if (scroll) setActive(true);
-    else if (active) setActive(false);
+    else setActive(false);
   };
 
-  window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Container active={active}>
@@ -23,9 +26,9 @@ const Navbar = () => {
         <Link to={`/informacion`}>
           <p className="p2">Documentación</p>
         </Link>
-        <Link to={`/nosotros`}>
+        {/* <Link to={`/nosotros`}>
           <p className="p2">Nosotros</p>
-        </Link>
+        </Link> */}
         <Link to={`/ubicacion`}>
           <p className="p2">Ubicación</p>
         </Link>

@@ -14,7 +14,7 @@ export const HomeContainer = styled.section`
     height: 100vh;
     width: 100vw;
     z-index: -1;
-    background: url(${image}) no-repeat center right;
+    /* background: url(${image}) no-repeat center right; */
     background-size: cover;
   }
 
