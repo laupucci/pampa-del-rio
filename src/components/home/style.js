@@ -35,6 +35,7 @@ export const HomeContainer = styled.section`
     background-color: rgba(228, 228, 228, 0.6);
     width: 42vw;
     height: 80vh;
+    padding: 0 1rem 0 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

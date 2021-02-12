@@ -1,6 +1,6 @@
 import { colors } from "../utils";
 import styled from "styled-components";
-const { black, whitish, primaryColor } = colors;
+const { whitish } = colors;
 
 export const Container = styled.header`
   position: fixed;
@@ -38,5 +38,28 @@ export const Container = styled.header`
   }
   a {
     text-decoration: none;
+    cursor: pointer;
+  }
+
+  .top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 2px solid ${whitish};
+    background: none;
+    font-size: 3rem;
+    font-weight: bold;
+    display: ${({ active }) => (active ? "flex" : "none")};
+    justify-content: center;
+    align-items: center;
+    color: ${whitish};
+    cursor: pointer;
+    span {
+      position: relative;
+      top: 0.5rem;
+    }
   }
 `;

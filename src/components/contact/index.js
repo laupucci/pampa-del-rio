@@ -1,9 +1,10 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
-import { useHistory } from "react-router-dom";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
 import { ContactContainer } from "./style";
+import Map from "../ubication/map";
+
+const mapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${process.env.REACT_APP_API_MAP}`;
 
 export default function Contact() {
   const validationSchema = Yup.object({
@@ -13,7 +14,6 @@ export default function Contact() {
     phone: Yup.number(),
     description: Yup.string().required("Ingrese su mensaje."),
   });
-  const history = useHistory();
 
   return (
     <Formik
@@ -28,78 +28,86 @@ export default function Contact() {
       onSubmit={async (values) => {}}
     >
       {({ values, errors, touched }) => (
-        <ContactContainer>
-          <div className="title">
-            <h2>Contactános!</h2>
-          </div>
-          <Form className="form_container">
-            <div className="field name_field">
-              <label>Nombre</label>
-              <Field
-                className="input"
-                type="text"
-                name="name"
-                placeholder="Nombre..."
-              />
-              <div className="error">
-                {touched.name && errors.name ? errors.name : null}
-              </div>
+        <ContactContainer id="contacto">
+          <section className="contact_form">
+            <div className="title">
+              <h2>Contactános!</h2>
             </div>
-            <div className="field lastname_field">
-              <label>Apellido</label>
-              <Field
-                className="input"
-                type="text"
-                name="lastname"
-                placeholder="Apellido..."
-              />
-              <div className="error">
-                {touched.lastname && errors.lastname ? errors.lastname : null}
+            <Form className="form_container">
+              <div className="field name_field">
+                <label>Nombre</label>
+                <Field
+                  className="input"
+                  type="text"
+                  name="name"
+                  placeholder="Nombre..."
+                />
+                <div className="error">
+                  {touched.name && errors.name ? errors.name : null}
+                </div>
               </div>
-            </div>
-            <div className="field phone_field">
-              <label>Teléfono</label>
-              <Field
-                name="phone"
-                type="text"
-                className="input"
-                placeholder="Teléfono..."
-              />
-              <div className="error">
-                {touched.phone && errors.phone ? errors.phone : null}
+              <div className="field lastname_field">
+                <label>Apellido</label>
+                <Field
+                  className="input"
+                  type="text"
+                  name="lastname"
+                  placeholder="Apellido..."
+                />
+                <div className="error">
+                  {touched.lastname && errors.lastname ? errors.lastname : null}
+                </div>
               </div>
-            </div>
-            <div className="field email_field">
-              <label>Email</label>
-              <Field
-                name="email"
-                type="email"
-                className="input"
-                placeholder="Mail..."
-              />
-              <div className="error">
-                {touched.email && errors.email ? errors.email : null}
+              <div className="field phone_field">
+                <label>Teléfono</label>
+                <Field
+                  name="phone"
+                  type="text"
+                  className="input"
+                  placeholder="Teléfono..."
+                />
+                <div className="error">
+                  {touched.phone && errors.phone ? errors.phone : null}
+                </div>
               </div>
-            </div>
-            <div className="field message_field">
-              <label>Mensaje</label>
-              <Field
-                component="textarea"
-                type="text"
-                name="description"
-                placeholder="Mensaje..."
-                className="input textarea"
-              />
-              <div className="error">
-                {touched.description && errors.description
-                  ? errors.description
-                  : null}
+              <div className="field email_field">
+                <label>Email</label>
+                <Field
+                  name="email"
+                  type="email"
+                  className="input"
+                  placeholder="Mail..."
+                />
+                <div className="error">
+                  {touched.email && errors.email ? errors.email : null}
+                </div>
               </div>
-            </div>
-            <button className="submit_btn" type="submit">
-              ENVIAR
-            </button>
-          </Form>
+              <div className="field message_field">
+                <label>Mensaje</label>
+                <Field
+                  component="textarea"
+                  type="text"
+                  name="description"
+                  placeholder="Mensaje..."
+                  className="input textarea"
+                />
+                <div className="error">
+                  {touched.description && errors.description
+                    ? errors.description
+                    : null}
+                </div>
+              </div>
+              <button className="submit_btn" type="submit">
+                ENVIAR
+              </button>
+            </Form>
+          </section>
+          <Map
+            googleMapURL={mapUrl}
+            containerElement={<section className="map" />}
+            mapElement={<div className="mapElement" />}
+            loadingElement={<p>Cargando...</p>}
+          />
         </ContactContainer>
       )}
     </Formik>
