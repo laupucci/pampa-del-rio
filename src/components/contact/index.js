@@ -7,11 +7,11 @@ import { ContactContainer } from "./style";
 
 export default function Contact() {
   const validationSchema = Yup.object({
-    name: Yup.string().required("Required"),
-    name: Yup.string().required("Required"),
-    email: Yup.string().email().required("Required"),
+    name: Yup.string().required("Ingrese su nombre."),
+    lastname: Yup.string().required("Ingrese su apellido."),
+    email: Yup.string().email().required("Ingrese su email."),
     phone: Yup.number(),
-    description: Yup.string().required("Required"),
+    description: Yup.string().required("Ingrese su mensaje."),
   });
   const history = useHistory();
 
@@ -29,88 +29,76 @@ export default function Contact() {
     >
       {({ values, errors, touched }) => (
         <ContactContainer>
-          <div className="imagen" />
           <div className="title">
-          <h2>Contactános!</h2>
+            <h2>Contactános!</h2>
           </div>
-          <Form className="container">
-            <div className="name">
-              <div className="labelIn1">
-                <label>Nombre</label>
-                <div className="inputConteiner">
-                  <Field
-                    className="input"
-                    type="text"
-                    name="name"
-                    placeholder="Nombre..."
-                  />
-                  {touched.name && errors.name ? (
-                    <div>{errors.name}</div>
-                  ) : null}
-                </div>
-              </div>
-              <div className="labelIn">
-                <label>Apellido</label>
-                <div className="inputConteiner">
-                  <Field
-                    className="input"
-                    type="text"
-                    name="lastname"
-                    placeholder="Apellido..."
-                  />
-                  {touched.lastname && errors.lastname ? (
-                    <div>{errors.lastname}</div>
-                  ) : null}
-                </div>
+          <Form className="form_container">
+            <div className="field name_field">
+              <label>Nombre</label>
+              <Field
+                className="input"
+                type="text"
+                name="name"
+                placeholder="Nombre..."
+              />
+              <div className="error">
+                {touched.name && errors.name ? errors.name : null}
               </div>
             </div>
-            <div className="contact">
-              <div className="labelIn1">
-                <label>Teléfono</label>
-                <div className="inputConteiner">
-                  <Field
-                    name="phone"
-                    type="text"
-                    className="input"
-                    placeholder="Teléfono..."
-                  />
-                  {touched.phone && errors.phone ? <div>Required</div> : null}
-                </div>
-              </div>
-              <div className="labelIn">
-                <label>Email</label>
-                <div className="inputConteiner">
-                  <Field
-                    name="email"
-                    type="email"
-                    className="input"
-                    placeholder="Mail..."
-                  />
-                  {touched.email && errors.email ? <div>Required</div> : null}
-                </div>
+            <div className="field lastname_field">
+              <label>Apellido</label>
+              <Field
+                className="input"
+                type="text"
+                name="lastname"
+                placeholder="Apellido..."
+              />
+              <div className="error">
+                {touched.lastname && errors.lastname ? errors.lastname : null}
               </div>
             </div>
-            <div className="labelIn2">
-            <label>Mensaje</label>
-            <div className="textareaConteiner">
+            <div className="field phone_field">
+              <label>Teléfono</label>
+              <Field
+                name="phone"
+                type="text"
+                className="input"
+                placeholder="Teléfono..."
+              />
+              <div className="error">
+                {touched.phone && errors.phone ? errors.phone : null}
+              </div>
+            </div>
+            <div className="field email_field">
+              <label>Email</label>
+              <Field
+                name="email"
+                type="email"
+                className="input"
+                placeholder="Mail..."
+              />
+              <div className="error">
+                {touched.email && errors.email ? errors.email : null}
+              </div>
+            </div>
+            <div className="field message_field">
+              <label>Mensaje</label>
               <Field
                 component="textarea"
                 type="text"
                 name="description"
                 placeholder="Mensaje..."
-                className="textarea"
+                className="input textarea"
               />
-
-              {touched.description && errors.description ? (
-                <div>{errors.description}</div>
-              ) : null}
+              <div className="error">
+                {touched.description && errors.description
+                  ? errors.description
+                  : null}
+              </div>
             </div>
-            </div>
-            <div className="">
-              <button className="btn" type="submit">
-                ENVIAR
-              </button>
-            </div>
+            <button className="submit_btn" type="submit">
+              ENVIAR
+            </button>
           </Form>
         </ContactContainer>
       )}

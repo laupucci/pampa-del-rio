@@ -1,121 +1,124 @@
 import image from "../../media/image.png";
 import styled from "styled-components";
 import { colors } from "../utils";
-const { black, darkColor, whitish, primaryColor, primaryColorDarker } = colors;
+const {
+  secondaryDark,
+  darkColor,
+  primaryColor,
+  primaryColorDarker2,
+  whitish,
+} = colors;
 
 export const ContactContainer = styled.section`
   color: ${darkColor};
-  height: 97vh;
-  margin-top: 1em;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //font-family: 'Patua One';
-  
-  .imagen {
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    background: url(${image}) no-repeat center right;
-    background-size: cover; 
-  }
-  .title{
-    width: 736px;
-    height: 66px;
+
+  .title {
+    padding: 1.5rem;
+    width: 40vw;
+    /* background-color: #272727; */
+    /* opacity: 0.8; */
     background-color: rgba(163, 189, 49, 0.8);
+    border-radius: 10px 10px 0 0;
+
+    h2 {
+      font-family: "Nixie One", sans-serif;
+      font-size: 2rem;
+      color: #e4e4e4;
+      /* color: #272727; */
+      font-weight: normal;
+    }
   }
-  h2{
-    font-family: 'Quando';
-    font-size: 24px;
-    color: #E4E4E4;
-    margin-left: 1.5em;
-  }
-  .container{
+  .form_container {
     background-color: rgba(228, 228, 228, 0.8);
-    width: 736px; 
-    height: 457px;
+    width: 40vw;
+    padding: 1.5rem;
+    display: grid;
+    border-radius: 0 0 10px 10px;
+    grid-template:
+      " _name   lastname" 2fr
+      " phone   email   " 2fr
+      "   msg   msg     " 4fr
+      "submit   submit  " 1fr/
+      1fr 1fr;
+    grid-gap: 1.5rem;
+  }
+
+  .field {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
-  .name{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 736px;
-  }
-  .contact{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 736px;
-  }
-  .labelIn{
-    width: 312px;
-  }
-  .labelIn1{
-    width: 312px;
-    margin-right: 37px;
-  }
-  .labelIn2{
-    width: 661px;
-  }
-  .btn{
-    width: 661px;
-    height: 30px;
-    background-color: rgba(163, 189, 49, 0.8);
-    color: #E8E8E8;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Sanchez';
-    font-size: 16px;
-    cursor: pointer;
-    &:hover{
-        background-color: rgba(117, 135, 39, 0.6);
-        border-radius: 5px;
-      }
-    }
-  label{
+
+  label {
     color: #272727;
-    font-family: 'Sanchez';
-    font-size: 20px;
+    font-family: "Sanchez";
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
   }
-  .input{
-    width: 300px;
-    height: 30px;
+  .input {
+    width: 100%;
+    height: 2rem;
+    padding: 1rem;
+    background-color: rgba(39, 39, 39, 0.6);
+    color: #e4e4e4;
+    font-family: "Sanchez";
+    border: 1.5px solid transparent;
     border-radius: 5px;
+    transition: 0.3s;
+    outline: none;
+
+    &:focus {
+      border: 1.5px solid ${whitish};
+      background-color: rgba(39, 39, 39, 0.5);
+    }
+  }
+  .error {
+    height: 0;
+    font-size: 0.8rem;
+    color: ${secondaryDark};
+  }
+
+  .input.textarea {
+    height: 100%;
+  }
+  .input::placeholder {
+    color: rgba(228, 228, 228, 0.6);
+  }
+  .submit_btn {
+    grid-area: submit;
+    background-color: rgba(163, 189, 49, 0.8);
+    color: ${whitish};
     border: none;
-    background-color: rgba(39, 39, 39, 0.5);
-    padding-left: 15px;
-  }
-  
-  input, textarea{
-    color: #E4E4E4;
-    font-family: 'Sanchez';
-    font-size: 16px;
-}
-input::placeholder{
-  color: rgba(228, 228, 228, 0.3);
-  padding-left: 2px;
-  font-family: 'Sanchez';
-    font-size: 16px;
-}
-textarea::placeholder{
-  color: rgba(228, 228, 228, 0.3);
-  padding-left: 5px;
-  padding-top: 5px;
-  font-family: 'Sanchez';
-    font-size: 16px;
-}
-  .textarea{
-    width: 661px;
-    height: 131px;
     border-radius: 5px;
-    background-color: rgba(39, 39, 39, 0.5);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Sanchez";
+
+    &:hover {
+      background-color: rgba(117, 135, 39, 0.6);
+      color: ${whitish};
+    }
   }
-  `
+  .name_field {
+    grid-area: _name;
+  }
+  .lastname_field {
+    grid-area: lastname;
+  }
+  .phone_field {
+    grid-area: phone;
+  }
+  .email_field {
+    grid-area: email;
+  }
+  .message_field {
+    grid-area: msg;
+  }
+`;
