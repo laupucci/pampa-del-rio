@@ -1,17 +1,16 @@
 import React from "react";
-import tenor from "../../media/tenor.gif"
+import tenor from "../../media/tenor.gif";
 import { InformationContainer } from "./style";
-
 
 export default function Information() {
   return (
     <div>
       <InformationContainer>
-      <div className="imagen"/>
-      <div className="container">
-      <img src={tenor}/>
-      <p>En construcción</p>
-      </div>
+        <div className="imagen" />
+        <div className="container">
+          <img src={tenor} alt="Sitio en construcción" />
+          <p>En construcción</p>
+        </div>
       </InformationContainer>
     </div>
   );

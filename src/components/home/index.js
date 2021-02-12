@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../../media/logo.svg";
 import { HomeContainer } from "./style";
-import About from "../us/index";
 import { Cta } from "../utils";
 
 export default function Home() {

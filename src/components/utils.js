@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
 import pol from "../media/pol.svg";
-import styled from "styled-components";
 
 export const colors = {
   black: "#1C1816",

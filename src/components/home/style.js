@@ -1,7 +1,5 @@
 import image from "../../media/image.png";
 import styled from "styled-components";
-import { colors } from "../utils";
-const { black, whitish, primaryColor, primaryColorDarker } = colors;
 
 export const HomeContainer = styled.section`
   height: 100vh;

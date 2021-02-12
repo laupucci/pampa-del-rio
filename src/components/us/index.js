@@ -22,19 +22,19 @@ export default function Us() {
       </div>
       <div className="caracteristicas">
         <div className="list_item">
-          <img src={map} className="item_icon" />
+          <img src={map} className="item_icon" alt="Icóno del item" />
           <p className="item_txt">Ubicado frente a la ruta 11</p>
         </div>
         <div className="list_item">
-          <img src={dest} className="item_icon" />
+          <img src={dest} className="item_icon" alt="Icóno del item" />
           <p className="item_txt">A 29 minutos de la ciudad de Santa Fe</p>
         </div>
         <div className="list_item">
-          <img src={comp} className="item_icon" />
+          <img src={comp} className="item_icon" alt="Icóno del item" />
           <p className="item_txt">Bajada al río Coronda a 1500 metros</p>
         </div>
         <div className="list_item">
-          <img src={turn} className="item_icon" />
+          <img src={turn} className="item_icon" alt="Icóno del item" />
           <p className="item_txt">
             Próximamente acceso por autopista Rosario Santa Fe
           </p>
