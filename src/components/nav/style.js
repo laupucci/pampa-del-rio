@@ -62,4 +62,33 @@ export const Container = styled.header`
       top: 0.5rem;
     }
   }
+
+  @media (max-width: 500px) {
+  margin-top: 1vh;
+  width: 100%;
+  justify-content: space-between;
+  /* padding: 0 4vw; */
+
+  .logo {
+    font-size: 4vw;
+  }
+  .menu {
+    justify-content: flex-end;
+    align-items: center }
+
+  .p2 {
+    color: ${whitish};
+    /* padding: 5%; */
+    font-size: 2.6vw;
+    font-family: "Sanchez";
+    justify-content: flex-end;
+    align-items: center;
+    margin: 3%;
+    &:hover {
+      background-color: rgba(163, 189, 49, 0.6);
+      border-radius:7px;
+      min-height: 10vh
+    }
+  } 
+  }
 `;
