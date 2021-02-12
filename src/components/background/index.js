@@ -5,10 +5,10 @@ import background from "../../media/background.jpg";
 const StyledBackground = styled.section`
   @keyframes scroll {
     from {
-      transform: translateY(-50%);
+      transform: translateY(-30%);
     }
     to {
-      transform: translateY(-45%);
+      transform: translateY(-25%);
     }
   }
   position: fixed;
