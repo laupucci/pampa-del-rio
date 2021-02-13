@@ -90,12 +90,16 @@ export const Container = styled.header`
       min-height: 10vh
     }
   } 
+  .top{
+    width: 8%;
+    height: 6%;
+  }
   }
 
   @media (max-width: 400px) {
   .top{
-    width: 10%;
-    height: 6%;
+    width: 7.2%;
+    height: 4.2%;
   }
   }
 `;
