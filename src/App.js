@@ -4,6 +4,7 @@ import Navbar from "./components/nav";
 import Contact from "./components/contact";
 import Spa from "./Spa";
 import Info from "./components/information";
+import Us from "./components/us";
 require("dotenv").config();
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route exact path="/informacion" component={Info} />
       <Route exact path="/contacto" component={Contact} />
       <Route exact path="/ubicacion" component={Contact} />
+      <Route exact path="/nosotros" component={Us} />
       {/* <Route path="/" component={Footer} /> */}
     </BrowserRouter>
   );

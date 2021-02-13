@@ -24,7 +24,7 @@ export const UsContainer = styled.section`
     background-color: rgba(228, 228, 228, 0.8);
     width: 80vw;
     height: 45vh;
-
+    border-radius: 3px;
     h2 {
       font-family: "Quando";
       font-size: 4rem;
@@ -51,6 +51,7 @@ export const UsContainer = styled.section`
     align-items: flex-start;
     background-color: rgba(161, 76, 75, 0.8);
     width: 75vw;
+    border-radius: 3px;
     /* height: 30vh; */
     .list_item {
       width: 25%;
