@@ -21,9 +21,13 @@ const Navbar = () => {
 
   return (
     <Container active={active}>
+       { window.location.pathname === '/' ?
+        <ScrollLink to="home" smooth={true} duration={500}>
+         <p className="logo">Pampa del Río</p>
+        </ScrollLink> :
       <Link to="/">
         <p className="logo">Pampa del Río</p>
-      </Link>
+      </Link>}
       <nav className="menu">
         <Link to={`/informacion`}>
           <p className="p2">Documentación</p>
