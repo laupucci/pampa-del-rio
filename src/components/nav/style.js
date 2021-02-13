@@ -64,7 +64,7 @@ export const Container = styled.header`
   }
 
   @media (max-width: 500px) {
- // margin-top: 1vh;
+  margin-top: 1vh;
   width: 100%;
   justify-content: space-between;
   /* padding: 0 4vw; */
@@ -90,12 +90,5 @@ export const Container = styled.header`
       min-height: 10vh
     }
   } 
-  }
-
-  @media (max-width: 400px) {
-  .top{
-    width: 10%;
-    height: 6%;
-  }
   }
 `;

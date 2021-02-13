@@ -108,49 +108,108 @@ export const UsContainer = styled.section`
   }
 
   @media (max-width: 500px) {
-    .nosotros {
-      width: 80vw;
-      height: 42vh;
+      position: relative;
+  color: ${whitish};
+  display: flex;
+  color: ${black};
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Sanchez";
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+  .nosotros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(228, 228, 228, 0.8);
+    width: 80vw;
+    height: 45vh;
+
+    h2 {
+      font-family: "Quando";
+      font-size: 200%;
+      margin-bottom: 0.5em;
+      width: 30%;
+      font-weight: normal;
+      color: ${darkBrown};
+    }
+
+    p::selection {
+      background: rgba(161, 76, 75, 0.7);
+      color: white;
+    }
+
+    .nosotros_txt {
+      width: 40%;
+    }
+  }
+
+  .caracteristicas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba(161, 76, 75, 0.8);
+    width: 75vw;
+    /* height: 30vh; */
+    .list_item {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-
-      h2 {
-        font-size: 100%;
-        width: 30%;
-      }
-
-      .nosotros_txt {
-        width: 64%;
-        font-size: 95%;
-      }
-    }
-
-    .caracteristicas {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
       align-items: center;
-      justify-items: center;
-      .list_item {
-        width: 90%;
-        height: 60%;
+      margin: 1.2em;
 
-        .item_icon {
-          height: 1.5rem;
-          width: 1.5rem;
-        }
+      .item_icon {
+        margin-bottom: 1rem;
+        height: 5rem;
+        width: 5rem;
+      }
 
-        .item_txt {
-          font-size: 75%;
-        }
+      .item_txt {
+        color: #e4e4e4;
+        text-align: center;
       }
     }
+  }
 
-    .cta {
-      .cta_txt {
-        font-size: 75%;
-      }
+  .cta {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
       .arrow {
-        margin-top: -0.2rem;
+        transform: scale(1.5);
+        margin-top: -0.4rem;
       }
     }
+
+    .cta_txt {
+      font-size: 1rem;
+      font-family: "Sanchez";
+      color: #e4e4e4;
+      transition: 0.3s ease-in-out;
+    }
+    .arrow {
+      margin-top: -0.2rem;
+      width: 2rem;
+      height: 2rem;
+      transition: 0.3s ease-in-out;
+    }
+  }
   }
 `;
