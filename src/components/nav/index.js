@@ -27,9 +27,13 @@ const Navbar = () => {
         <Link to={`/informacion`}>
           <p className="p2">Documentación</p>
         </Link>
+        { window.location.pathname === '/' ?
         <ScrollLink to="contacto" smooth={true} duration={600}>
           <p className="p2">Ubicación y contacto</p>
-        </ScrollLink>
+        </ScrollLink> :
+        <Link to={`/contacto`}>
+          <p className="p2">Ubicación y contacto</p>
+        </Link>}
       </nav>
       <ScrollLink to="home" smooth={true} duration={500} className="top">
         <span>^</span>
