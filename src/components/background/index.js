@@ -29,11 +29,6 @@ const StyledBackground = styled.section`
     animation-iteration-count: 1;
     animation-fill-mode: both;
   }
-  @media (max-width: 500px) {
-    img {
-      min-height: 142vh;
-    }
-  }
 `;
 
 const Background = () => {
