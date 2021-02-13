@@ -106,4 +106,50 @@ export const UsContainer = styled.section`
       transition: 0.3s ease-in-out;
     }
   }
+  @media (max-width: 500px) {
+    .nosotros {
+      width: 80vw;
+      height: 42vh;
+      justify-content: center;
+
+      h2 {
+        font-size: 100%;
+        width: 30%;
+      }
+
+      .nosotros_txt {
+        width: 64%;
+        font-size: 95%;
+      }
+    }
+
+    .caracteristicas {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-items: center;
+      .list_item {
+        width: 90%;
+        height: 60%;
+
+        .item_icon {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+
+        .item_txt {
+          font-size: 75%;
+        }
+      }
+    }
+
+    .cta {
+      .cta_txt {
+        font-size: 75%;
+      }
+      .arrow {
+        margin-top: -0.2rem;
+      }
+    }
+  }
 `;

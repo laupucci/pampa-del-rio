@@ -62,4 +62,40 @@ export const Container = styled.header`
       top: 0.5rem;
     }
   }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 4vw;
+    }
+    .menu {
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .p2 {
+      color: ${whitish};
+      font-size: 2.6vw;
+      font-family: "Sanchez";
+      justify-content: flex-end;
+      align-items: center;
+      margin: 3%;
+      &:hover {
+        background-color: rgba(163, 189, 49, 0.6);
+        border-radius: 7px;
+        min-height: 10vh;
+      }
+    }
+    .top {
+      width: 8%;
+      height: 6%;
+    }
+  }
+  @media (max-width: 400px) {
+    .top {
+      width: 7.2%;
+      height: 4.2%;
+    }
+  }
 `;
