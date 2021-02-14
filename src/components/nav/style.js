@@ -84,7 +84,7 @@ export const Container = styled.header`
       &:hover {
         background-color: rgba(163, 189, 49, 0.6);
         border-radius: 7px;
-        min-height: 10vh;
+        min-height: 7vh;
       }
     }
     .top {
@@ -93,6 +93,9 @@ export const Container = styled.header`
     }
   }
   @media (max-width: 400px) {
+    width: 100vw;
+    padding: 0;
+    justify-content: space-between;
     .top {
       width: 7.2%;
       height: 4.2%;

@@ -140,23 +140,25 @@ export const ContactContainer = styled.section`
     display: grid;
     height: 100vh;
     width: 100vw;
-    margin: 0 auto;
-    grid-template-columns: (1fr, 1fr);
+    grid-template-columns: (1.2fr, 0.8fr);
     margin: 0 auto;
     grid-template:
-      "form" 1.2fr
-      "map" 0.8fr;
+      "map" 1.2fr
+      "form" 0.8fr;
+      grid-gap: 0;
     
-
     .map {
       grid-area: map;
       border-radius: 10px;
-      margin: 0 12%;
+      margin: 0% 12%;
+      margin-top: 17.5%;
+
     }
 
     .contact_form {
       .title {
-        padding: 3%;
+        padding: 2.5%;
+        margin: 0;
         width: 80vw;
 
         h2 {
@@ -166,7 +168,7 @@ export const ContactContainer = styled.section`
       .form_container {
         width: 80vw;
         height: 55%;
-        padding: 1.5%;
+        padding: 0.5%;
         grid-gap: 0.85rem;
       }
 

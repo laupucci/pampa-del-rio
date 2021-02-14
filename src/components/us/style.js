@@ -111,15 +111,18 @@ export const UsContainer = styled.section`
     .nosotros {
       width: 80vw;
       height: 42vh;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
 
       h2 {
         font-size: 100%;
-        width: 30%;
+        width: 50%;
+        align-items: center;
       }
 
       .nosotros_txt {
-        width: 64%;
+        width: 95%;
         font-size: 95%;
       }
     }

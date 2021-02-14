@@ -6,6 +6,7 @@ export const HomeContainer = styled.section`
   width: 100vw;
   overflow: hidden;
   scroll-behavior: smooth;
+  margin: 0 auto;
 
   .background {
     position: fixed;
@@ -99,7 +100,7 @@ export const HomeContainer = styled.section`
   @media (max-width: 500px) {
     .container {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
       margin-top: 1vh;
@@ -107,7 +108,7 @@ export const HomeContainer = styled.section`
 
     .hero_txt {
       width: 78vw;
-      height: 40vh;
+      height: 43vh;
       padding: 0 0rem 0 1rem;
 
       .title {
@@ -119,7 +120,7 @@ export const HomeContainer = styled.section`
     }
 
     .logo {
-      width: 40vw;
+      width: 38vw;
       height: 31vh;
     }
 
