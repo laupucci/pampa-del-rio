@@ -3,6 +3,8 @@ import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import { ContactContainer } from "./style";
 import Map from "../ubication/map";
+import { init, emailjs, send } from "emailjs-com";
+init(process.env.REACT_APP_USER_ID);
 
 const mapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${process.env.REACT_APP_API_MAP}`;
 
@@ -25,7 +27,29 @@ export default function Contact() {
         description: "",
       }}
       validationSchema={validationSchema}
-      onSubmit={async (values) => {}}
+      onSubmit={(values) => {
+        console.log(values);
+        var templateParams = {
+          from_name: "Pampa del Río",
+          to_name: values.name + " " + values.lastname,
+          message: values.description,
+          to_email: values.email,
+        };
+        console.log(templateParams);
+
+        send(
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
+          templateParams
+        ).then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+      }}
     >
       {({ values, errors, touched }) => (
         <ContactContainer id="contacto">
