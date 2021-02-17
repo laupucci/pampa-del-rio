@@ -97,7 +97,8 @@ export const HomeContainer = styled.section`
       transition: 0.3s ease-in-out;
     }
   }
-  @media (max-width: 500px) {
+
+  @media (max-width: 900px) {
     .container {
       display: flex;
       flex-direction: column-reverse;
@@ -107,12 +108,15 @@ export const HomeContainer = styled.section`
     }
 
     .hero_txt {
-      width: 78vw;
+      width: 72vw;
       height: 43vh;
       padding: 0 0rem 0 1rem;
+      justify-content: center;
+      align-items: center;
 
       .title {
         font-size: 7.5vh;
+        width: 80%
       }
       .subtitle {
         font-size: 3.8vh;
@@ -125,7 +129,7 @@ export const HomeContainer = styled.section`
     }
 
     .logo_container {
-      width: 78vw;
+      width: 72vw;
       height: 35vh;
     }
 
@@ -135,6 +139,86 @@ export const HomeContainer = styled.section`
       width: 100%;
       overflow: hidden;
       padding: 0.5rem 0.5rem 0 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        .arrow {
+          transform: scale(1.5);
+          margin-top: -0.4rem;
+        }
+      }
+
+      .cta_txt {
+        font-size: 1.5vh;
+        font-family: "Sanchez";
+        color: #e4e4e4;
+        transition: 0.3s ease-in-out;
+      }
+      .arrow {
+        margin-top: -0.2rem;
+        width: 2rem;
+        height: 2rem;
+        transition: 0.3s ease-in-out;
+        margin-bottom: 1vh
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 0;
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 0;
+      //justify-content: center;
+      //align-items: center;
+    //  margin: 0;
+    }
+
+    .hero_txt {
+      width: 78vw;
+      height: 42vh;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0;
+
+      .title {
+        font-size: 245%;
+        margin: 0 5px;
+        width: 95%;
+        padding: 0;
+      }
+      .subtitle {
+        width: 95%;
+        font-size: 160%;
+        margin: 2px 5px 5px 5px;
+      }
+    }
+
+    .logo {
+      width: 38vw;
+      height: 31vh;
+    }
+
+    .logo_container {
+      width: 78vw;
+      height: 30vh;
+    }
+
+    .cta {
+      position: absolute;
+      margin-bottom: 2.4vh;
+     // bottom: 0;
+      width: 100%;
+      overflow: hidden;
+      //padding: 0.5rem 0.5rem 0 0.5rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
