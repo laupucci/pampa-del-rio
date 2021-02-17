@@ -151,7 +151,8 @@ export const ContactContainer = styled.section`
     height: 70%;
       width: 70%;
       margin: 0% 15%;
-      margin-top: 15%;
+      margin-top: 11%;
+      margin-bottom: 3%
   }
 
   .contact_form {
