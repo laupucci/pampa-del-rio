@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { Container, ArrowStyle } from "./style";
+import { NavLink } from "../utils";
 import MenuIcon from "../../media/menu.svg";
 import CloseIcon from "../../media/close.svg";
 import UpArrow from "../../media/up-arrow.svg";
@@ -43,15 +44,9 @@ const Navbar = () => {
   return (
     <>
       <Container active={active}>
-        {window.location.pathname === "/" ? (
-          <ScrollLink to="home" smooth={true} duration={500}>
-            <p className="logo">Pampa del Río</p>
-          </ScrollLink>
-        ) : (
-          <Link to="/">
-            <p className="logo">Pampa del Río</p>
-          </Link>
-        )}
+        <NavLink to="home">
+          <p className="logo">Pampa del Río</p>
+        </NavLink>
 
         <img
           className="menu_open active"
@@ -72,38 +67,15 @@ const Navbar = () => {
           <Link className="menu_item" to={`/informacion`}>
             <p>Documentación</p>
           </Link>
-          {window.location.pathname === "/" ? (
-            <ScrollLink
-              className="menu_item"
-              to="nosotros"
-              smooth={true}
-              duration={600}
-              onClick={handleClick}
-            >
-              <p>¿Quiénes Somos?</p>
-            </ScrollLink>
-          ) : (
-            <Link className="menu_item" to={`/nosotros`}>
-              <p>¿Quiénes Somos?</p>
-            </Link>
-          )}
-          {window.location.pathname === "/" ? (
-            <ScrollLink
-              className="menu_item"
-              to="contacto"
-              smooth={true}
-              duration={600}
-              onClick={handleClick}
-            >
-              <p>Ubicación y contacto</p>
-            </ScrollLink>
-          ) : (
-            <Link className="menu_item" to={`/contacto`}>
-              <p>Ubicación y contacto</p>
-            </Link>
-          )}
+          <NavLink to="nosotros" onClick={handleClick}>
+            <p>¿Quiénes Somos?</p>
+          </NavLink>
+          <NavLink to="contacto" onClick={handleClick}>
+            <p>Ubicación y contacto</p>
+          </NavLink>
         </nav>
       </Container>
+
       <ArrowStyle active={active}>
         <ScrollLink to="home" smooth={true} duration={500} className="top">
           <img src={UpArrow} alt="Ir arriba" />

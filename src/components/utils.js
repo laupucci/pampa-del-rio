@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import pol from "../media/pol.svg";
 
 export const colors = {
@@ -15,9 +16,21 @@ export const colors = {
 
 export const Cta = ({ text, to }) => {
   return (
-    <Link to={to} spy={true} smooth={true} duration={500} className="cta">
+    <ScrollLink to={to} spy={true} smooth={true} duration={500} className="cta">
       <span className="cta_txt">{text}</span>
       <img className="arrow" src={pol} alt="poli" />
+    </ScrollLink>
+  );
+};
+
+export const NavLink = ({ to, children }) => {
+  return window.location.pathname === "/" ? (
+    <ScrollLink className="menu_item" to={to} smooth={true} duration={600}>
+      {children}
+    </ScrollLink>
+  ) : (
+    <Link className="menu_item" to={to === "home" ? "/" : `/${to}`}>
+      {children}
     </Link>
   );
 };
