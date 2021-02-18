@@ -1,4 +1,3 @@
-import image from "../../media/image.png";
 import styled from "styled-components";
 
 export const HomeContainer = styled.section`
