@@ -109,60 +109,47 @@ export const UsContainer = styled.section`
   }
   @media (max-width: 900px) {
     .nosotros {
-      width: 80vw;
-      height: 41vh;
+      height: 35vh;
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
       h2 {
-        font-size: 130%;
-        width: 80%;
-        align-items: center;
+        font-size: 5vh;
+        width: auto;
       }
 
       .nosotros_txt {
-        width: 95%;
-        font-size: 120%;
+        width: 100%;
+        padding: 0 4vh;
+        font-size: 2.5vh;
       }
     }
 
     .caracteristicas {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: rgba(161, 76, 75, 0.8);
-    width: 75vw;
-    border-radius: 3px;
-    /* height: 30vh; */
-    .list_item {
-      width: 25%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2%;
+      .list_item {
+        padding: 2%;
+        margin: 2vw;
 
-      .item_icon {
-        margin-bottom: 4%;
-        //height: 8%;
-        width: 80%;
-      }
+        .item_icon {
+          height: 8vh;
+          width: 8vh;
+        }
 
-      .item_txt {
-        color: #e4e4e4;
-        text-align: center;
+        .item_txt {
+          color: #e4e4e4;
+          text-align: center;
+          font-size: 2.5vh;
+        }
       }
     }
-  }
 
     .cta {
       .cta_txt {
-        font-size: 75%;
+        font-size: 2vh;
       }
       .arrow {
-        margin-top: -0.2rem;
+        margin-bottom: 2vh;
       }
     }
   }
@@ -171,51 +158,35 @@ export const UsContainer = styled.section`
     .nosotros {
       width: 85vw;
       height: 41vh;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
 
       h2 {
-        font-size: 120%;
-        width: 80%;
+        font-size: 4vh;
         align-items: center;
       }
 
       .nosotros_txt {
-        width: 95%;
-        font-size: 80%;
+        font-size: 2vh;
       }
     }
 
     .caracteristicas {
       display: grid;
-      width: 79vw;
-      height: 40vh;
+      width: 80vw;
+      height: 35vh;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
       justify-items: center;
       .list_item {
         width: 90%;
-        height: 50%;
-        margin: 0;
 
         .item_icon {
-          height: 1.5rem;
-          width: 1.5rem;
+          width: 2.5rem;
+          margin: 0;
         }
 
         .item_txt {
-          font-size: 72%;
+          font-size: 2vh;
         }
-      }
-    }
-
-    .cta {
-      .cta_txt {
-        font-size: 75%;
-      }
-      .arrow {
-        margin-top: -0.2rem;
       }
     }
   }

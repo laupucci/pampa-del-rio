@@ -135,9 +135,6 @@ export const HomeContainer = styled.section`
       .cta_txt {
         font-size: 2vh;
       }
-      .arrow {
-        margin-bottom: 1vh;
-      }
     }
 
     @media (max-width: 500px) {
