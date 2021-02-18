@@ -104,9 +104,11 @@ const Navbar = () => {
           )}
         </nav>
       </Container>
-      <ScrollLink to="home" smooth={true} duration={500} className="top">
-        <img style={ArrowStyle} src={UpArrow} alt="Ir arriba" />
-      </ScrollLink>
+      <ArrowStyle active={active}>
+        <ScrollLink to="home" smooth={true} duration={500} className="top">
+          <img src={UpArrow} alt="Ir arriba" />
+        </ScrollLink>
+      </ArrowStyle>
     </>
   );
 };
