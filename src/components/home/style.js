@@ -13,8 +13,6 @@ export const HomeContainer = styled.section`
     height: 100vh;
     width: 100vw;
     z-index: -1;
-    /* background: url(${image}) no-repeat center right; */
-    background-size: cover;
   }
 
   .container {
@@ -26,7 +24,6 @@ export const HomeContainer = styled.section`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* margin-top: 4em; */
   }
 
   .hero_txt {
@@ -104,147 +101,68 @@ export const HomeContainer = styled.section`
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
-      margin-top: 1vh;
+    }
+
+    .logo_container {
+      width: 75vw;
+      height: 40vw;
+      max-height: 250px;
+
+      .logo {
+        width: 30vw;
+        max-width: 200px;
+      }
     }
 
     .hero_txt {
-      width: 72vw;
-      height: 43vh;
+      width: 75vw;
+      height: 40vh;
       padding: 0 0rem 0 1rem;
       justify-content: center;
       align-items: center;
 
       .title {
-        font-size: 7.5vh;
-        width: 80%
+        font-size: 7vh;
+        padding: 0 2rem;
       }
       .subtitle {
         font-size: 3.8vh;
+        padding: 0 2rem;
       }
-    }
-
-    .logo {
-      width: 38vw;
-      height: 31vh;
-    }
-
-    .logo_container {
-      width: 72vw;
-      height: 35vh;
     }
 
     .cta {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      overflow: hidden;
-      padding: 0.5rem 0.5rem 0 0.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      transition: 0.3s ease-in-out;
-      cursor: pointer;
-      &:hover {
-        .arrow {
-          transform: scale(1.5);
-          margin-top: -0.4rem;
+      .cta_txt {
+        font-size: 2vh;
+      }
+      .arrow {
+        margin-bottom: 1vh;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .logo_container {
+        width: 80vw;
+        height: 35vh;
+
+        .logo {
+          width: 35vw;
+          max-width: 500px;
         }
       }
 
-      .cta_txt {
-        font-size: 1.5vh;
-        font-family: "Sanchez";
-        color: #e4e4e4;
-        transition: 0.3s ease-in-out;
-      }
-      .arrow {
-        margin-top: -0.2rem;
-        width: 2rem;
-        height: 2rem;
-        transition: 0.3s ease-in-out;
-        margin-bottom: 1vh
-      }
-    }
-  }
+      .hero_txt {
+        width: 80vw;
+        height: 40vh;
 
-  @media (max-width: 500px) {
-    margin-top: 0;
-    .container {
-      display: flex;
-      flex-direction: column-reverse;
-      margin-top: 0;
-      //justify-content: center;
-      //align-items: center;
-    //  margin: 0;
-    }
-
-    .hero_txt {
-      width: 78vw;
-      height: 42vh;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 0;
-
-      .title {
-        font-size: 245%;
-        margin: 0 5px;
-        width: 95%;
-        padding: 0;
-      }
-      .subtitle {
-        width: 95%;
-        font-size: 160%;
-        margin: 2px 5px 5px 5px;
-      }
-    }
-
-    .logo {
-      width: 38vw;
-      height: 31vh;
-    }
-
-    .logo_container {
-      width: 78vw;
-      height: 30vh;
-    }
-
-    .cta {
-      position: absolute;
-      margin-bottom: 2.4vh;
-     // bottom: 0;
-      width: 100%;
-      overflow: hidden;
-      //padding: 0.5rem 0.5rem 0 0.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      transition: 0.3s ease-in-out;
-      cursor: pointer;
-      &:hover {
-        .arrow {
-          transform: scale(1.5);
-          margin-top: -0.4rem;
+        .title {
+          font-size: 8vw;
+          padding: 0 1rem;
         }
-      }
-
-      .cta_txt {
-        font-size: 1.5vh;
-        font-family: "Sanchez";
-        color: #e4e4e4;
-        transition: 0.3s ease-in-out;
-      }
-      .arrow {
-        margin-top: -0.2rem;
-        width: 2rem;
-        height: 2rem;
-        transition: 0.3s ease-in-out;
-        margin-bottom: 1vh
+        .subtitle {
+          font-size: 6vw;
+          padding: 0 1rem;
+        }
       }
     }
   }
