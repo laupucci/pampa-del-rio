@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { Container } from "./style";
+import { Container, ArrowStyle } from "./style";
 import MenuIcon from "../../media/menu.svg";
 import CloseIcon from "../../media/close.svg";
 import UpArrow from "../../media/up-arrow.svg";
@@ -38,19 +38,6 @@ const Navbar = () => {
       menu.current.classList.add("active");
     }
     setSidebarActive(!sidebarActive);
-  };
-
-  const arrowStyle = {
-    position: "fixed",
-    right: "1rem",
-    bottom: "1rem",
-    width: "10vw",
-    maxWidth: "50px",
-    height: "10vw",
-    maxHeight: "50px",
-    display: active ? "block" : "none",
-    cursor: "pointer",
-    zIndex: "5",
   };
 
   return (

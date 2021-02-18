@@ -104,3 +104,16 @@ export const Container = styled.header`
     }
   }
 `;
+
+export const ArrowStyle = {
+  position: "fixed",
+  right: "1rem",
+  bottom: "1rem",
+  width: "10vw",
+  maxWidth: "50px",
+  height: "10vw",
+  maxHeight: "50px",
+  display: active ? "block" : "none",
+  cursor: "pointer",
+  zIndex: "5",
+};
