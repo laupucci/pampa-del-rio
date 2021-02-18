@@ -23,9 +23,15 @@ export const Cta = ({ text, to }) => {
   );
 };
 
-export const NavLink = ({ to, children }) => {
+export const NavLink = ({ to, children, handleClick }) => {
   return window.location.pathname === "/" ? (
-    <ScrollLink className="menu_item" to={to} smooth={true} duration={600}>
+    <ScrollLink
+      className="menu_item"
+      onClick={handleClick}
+      to={to}
+      smooth={true}
+      duration={600}
+    >
       {children}
     </ScrollLink>
   ) : (

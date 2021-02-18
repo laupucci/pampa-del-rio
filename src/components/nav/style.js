@@ -12,13 +12,13 @@ export const Container = styled.header`
   align-items: center;
   background-color: ${({ active }) => (active ? "rgba(0, 0, 0, 0.5)" : "none")};
   transition: background 0.5s ease;
-  z-index: 5;
+  z-index: 10;
 
   .logo {
     font-size: 1.5rem;
     font-family: "Julius Sans One";
     color: ${whitish};
-    /* padding: 1rem; */
+    cursor: pointer;
   }
 
   .menu_open,

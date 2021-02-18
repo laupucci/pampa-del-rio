@@ -28,7 +28,6 @@ const Navbar = () => {
 
   // Toggles the navbar
   const handleClick = () => {
-    console.log("clicked");
     if (sidebarActive) {
       opener.current.classList.add("active");
       closer.current.classList.remove("active");
@@ -67,10 +66,10 @@ const Navbar = () => {
           <Link className="menu_item" to={`/informacion`}>
             <p>Documentación</p>
           </Link>
-          <NavLink to="nosotros" onClick={handleClick}>
+          <NavLink to="nosotros" handleClick={handleClick}>
             <p>¿Quiénes Somos?</p>
           </NavLink>
-          <NavLink to="contacto" onClick={handleClick}>
+          <NavLink to="contacto" handleClick={handleClick}>
             <p>Ubicación y contacto</p>
           </NavLink>
         </nav>
