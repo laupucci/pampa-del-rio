@@ -26,7 +26,7 @@ export default function Contact() {
         description: "",
       }}
       validationSchema={validationSchema}
-      onSubmit={(values) => {
+      onSubmit={(values, { resetForm }) => {
         var templateParams = {
           from_name: "Pampa del Río",
           to_name: values.name + " " + values.lastname,
@@ -41,6 +41,7 @@ export default function Contact() {
         ).then(
           function (response) {
             console.log("SUCCESS!", response.status, response.text);
+            resetForm({})
           },
           function (error) {
             console.log("FAILED...", error);
