@@ -18,10 +18,9 @@ export const ContactContainer = styled.section`
     grid-area: map;
     background-color: rgba(163, 189, 49, 0.4);
     border-radius: 10px;
-      height: 100%;
-      width: 100%;
-    }
-  
+    height: 100%;
+    width: 100%;
+  }
 
   .contact_form {
     grid-area: form;
@@ -136,125 +135,91 @@ export const ContactContainer = styled.section`
   }
 
   @media (max-width: 900px) {
-    display: grid;
-    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: auto;
     width: 100vw;
-    grid-template-columns: (1fr, 1fr);
     margin: 0 auto;
-    grid-template:
-      "map" 1fr
-      "form" 1fr;
 
     .map {
-    height: 70%;
-      width: 70%;
-      margin: 0% 15%;
-      margin-top: 10.5%;
-      margin-bottom: 3%
-  }
-
-  .contact_form {
-    margin-bottom: 1%;
-
-    .title {
-      padding: 2%;
-      width: 65vw;
-
-      h2 {
-        font-size: 4vw;
-      }
-    }
-    .form_container {
-      width: 65vw;
-      padding: 3%;
-      grid-gap: 4%;
-    }
-
-    label {
-      font-size: 2vw;
-      padding-bottom: 0.5vw;
-    }
-    .input {
-      width: 100%;
-      height: 5vh;
-      padding: 1.5vw;
-    }
-    .error {
-      font-size: 1vw;
-    }
-
-    .submit_btn {
-      padding: 0.5vw;
-    }
-
-  }
-  }
-
-
-  @media (max-width: 500px) {
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    grid-template-columns: (1.2fr, 0.8fr);
-    margin: 0 auto;
-    grid-template:
-      "map" 1.2fr
-      "form" 0.8fr;
-      grid-gap: 0;
-    
-    .map {
-      grid-area: map;
-      border-radius: 10px;
-      margin: 0% 12%;
-      margin-top: 17.5%;
-
+      height: 40vh;
+      width: 80vw;
+      margin: 12vh auto 2rem auto;
     }
 
     .contact_form {
+      margin-bottom: 2rem;
+
       .title {
-        padding: 2.5%;
-        margin: 0;
+        padding: 1rem;
         width: 80vw;
 
         h2 {
-          font-size: 100%;
+          font-size: 4vw;
         }
       }
       .form_container {
         width: 80vw;
-        height: 75%;
-        padding: 0.5%;
-        grid-gap: 0.85rem;
-        align-self: center;
-        justify-self: center;
-        
+        padding: 1rem;
       }
 
       label {
-        color: #272727;
-        font-family: "Sanchez";
-        font-size: 75%;
-        margin-left: 3%;
+        font-size: 2vw;
+        padding-bottom: 1.5vh;
       }
       .input {
-        height: 50%;
-        font-size: 75%;
-        padding: 3%;
-        width: 95%;
-        margin-left: 2%;
+        width: 100%;
+        height: 5vh;
+        padding: 1.5vw;
       }
       .error {
-        font-size: 0.7rem;
+        font-size: 2vh;
+      }
+
+      .submit_btn {
+        padding: 0.5vw;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .contact_form {
+      .title {
+        h2 {
+          font-size: 5vw;
+        }
+      }
+
+      .form_container {
+        padding: 0.5rem;
+        grid-gap: 0.5rem;
+      }
+
+      label {
+        font-size: 3vw;
+        margin-left: 1vw;
+        padding-bottom: 1vh;
+      }
+
+      .input {
+        height: 50%;
+        font-size: 3vw;
+        padding: 3%;
+      }
+      .error {
+        font-size: 2vw;
+        margin: 1vw;
       }
 
       .input.textarea {
         height: 65%;
-        width: 96.4%
-      }
-      }
-      .submit_btn {
-      padding: 0;
-      margin: 0;
       }
     }
+    .submit_btn {
+      padding: 0;
+      margin: 0;
+    }
+  }
 `;
