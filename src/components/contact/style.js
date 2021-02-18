@@ -16,14 +16,12 @@ export const ContactContainer = styled.section`
 
   .map {
     grid-area: map;
-    background: #e4e4e4;
+    background-color: rgba(163, 189, 49, 0.4);
     border-radius: 10px;
-    .mapElement {
-      border-radius: 10px;
       height: 100%;
       width: 100%;
     }
-  }
+  
 
   .contact_form {
     grid-area: form;
@@ -151,7 +149,7 @@ export const ContactContainer = styled.section`
     height: 70%;
       width: 70%;
       margin: 0% 15%;
-      margin-top: 11%;
+      margin-top: 10.5%;
       margin-bottom: 3%
   }
 

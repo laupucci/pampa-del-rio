@@ -8,7 +8,7 @@ export default function Information() {
       <InformationContainer>
         <div className="imagen" />
         <div className="container">
-          <img src={tenor} alt="Sitio en construcción" />
+          <img src={tenor} alt="sitio en construcción" />
           <p>En construcción</p>
         </div>
       </InformationContainer>

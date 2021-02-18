@@ -2,11 +2,10 @@ import React from "react";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import { ContactContainer } from "./style";
-import Map from "../ubication/map";
-import { init, emailjs, send } from "emailjs-com";
+import Map from "../ubication";
+import { init, send } from "emailjs-com";
 init(process.env.REACT_APP_USER_ID);
 
-const mapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${process.env.REACT_APP_API_MAP}`;
 
 export default function Contact() {
   const validationSchema = Yup.object({
@@ -126,12 +125,16 @@ export default function Contact() {
               </button>
             </Form>
           </section>
-          <Map
+          {/* <Map
             googleMapURL={mapUrl}
             containerElement={<section className="map" />}
             mapElement={<div className="mapElement" />}
             loadingElement={<p>Cargando...</p>}
-          />
+          /> */}
+          <section className="map" >
+          <Map />
+          </section>
+
         </ContactContainer>
       )}
     </Formik>
