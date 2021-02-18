@@ -27,14 +27,12 @@ export default function Contact() {
       }}
       validationSchema={validationSchema}
       onSubmit={(values) => {
-        console.log(values);
         var templateParams = {
           from_name: "Pampa del Río",
           to_name: values.name + " " + values.lastname,
           message: values.description,
           to_email: values.email,
         };
-        console.log(templateParams);
 
         send(
           process.env.REACT_APP_SERVICE_ID,
