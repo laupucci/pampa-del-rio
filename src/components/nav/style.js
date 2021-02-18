@@ -113,7 +113,8 @@ export const ArrowStyle = {
   maxWidth: "50px",
   height: "10vw",
   maxHeight: "50px",
-  display: active ? "block" : "none",
+  // display: active ? "block" : "none",
+  display: "none",
   cursor: "pointer",
   zIndex: "5",
 };
