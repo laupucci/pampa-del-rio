@@ -40,9 +40,22 @@ const Navbar = () => {
     setSidebarActive(!sidebarActive);
   };
 
+  const arrowStyle = {
+    position: "fixed",
+    right: "1rem",
+    bottom: "1rem",
+    width: "10vw",
+    maxWidth: "50px",
+    height: "10vw",
+    maxHeight: "50px",
+    display: active ? "block" : "none",
+    cursor: "pointer",
+    zIndex: "5",
+  };
+
   return (
-    <Container active={active}>
-      <div className="logo_container">
+    <>
+      <Container active={active}>
         {window.location.pathname === "/" ? (
           <ScrollLink to="home" smooth={true} duration={500}>
             <p className="logo">Pampa del Río</p>
@@ -52,65 +65,65 @@ const Navbar = () => {
             <p className="logo">Pampa del Río</p>
           </Link>
         )}
-      </div>
 
-      <img
-        className="menu_open active"
-        onClick={handleClick}
-        ref={opener}
-        src={MenuIcon}
-        alt="Abrir Menú"
-      />
-      <img
-        className="menu_close"
-        onClick={handleClick}
-        ref={closer}
-        src={CloseIcon}
-        alt="Cerrar Menú"
-      />
+        <img
+          className="menu_open active"
+          onClick={handleClick}
+          ref={opener}
+          src={MenuIcon}
+          alt="Abrir Menú"
+        />
+        <img
+          className="menu_close"
+          onClick={handleClick}
+          ref={closer}
+          src={CloseIcon}
+          alt="Cerrar Menú"
+        />
 
-      <nav ref={menu} className="menu" onClick={handleClick}>
-        <Link className="menu_item" to={`/informacion`}>
-          <p>Documentación</p>
-        </Link>
-        {window.location.pathname === "/" ? (
-          <ScrollLink
-            className="menu_item"
-            to="nosotros"
-            smooth={true}
-            duration={600}
-            onClick={handleClick}
-          >
-            <p>¿Quiénes Somos?</p>
-          </ScrollLink>
-        ) : (
-          <Link
-            className="menu_item"
-            to={{ pathname: `/nosotros`, params: true }}
-          >
-            <p>¿Quiénes Somos?</p>
+        <nav ref={menu} className="menu" onClick={handleClick}>
+          <Link className="menu_item" to={`/informacion`}>
+            <p>Documentación</p>
           </Link>
-        )}
-        {window.location.pathname === "/" ? (
-          <ScrollLink
-            className="menu_item"
-            to="contacto"
-            smooth={true}
-            duration={600}
-            onClick={handleClick}
-          >
-            <p>Ubicación y contacto</p>
-          </ScrollLink>
-        ) : (
-          <Link className="menu_item" to={`/contacto`}>
-            <p>Ubicación y contacto</p>
-          </Link>
-        )}
-      </nav>
+          {window.location.pathname === "/" ? (
+            <ScrollLink
+              className="menu_item"
+              to="nosotros"
+              smooth={true}
+              duration={600}
+              onClick={handleClick}
+            >
+              <p>¿Quiénes Somos?</p>
+            </ScrollLink>
+          ) : (
+            <Link
+              className="menu_item"
+              to={{ pathname: `/nosotros`, params: true }}
+            >
+              <p>¿Quiénes Somos?</p>
+            </Link>
+          )}
+          {window.location.pathname === "/" ? (
+            <ScrollLink
+              className="menu_item"
+              to="contacto"
+              smooth={true}
+              duration={600}
+              onClick={handleClick}
+            >
+              <p>Ubicación y contacto</p>
+            </ScrollLink>
+          ) : (
+            <Link className="menu_item" to={`/contacto`}>
+              <p>Ubicación y contacto</p>
+            </Link>
+          )}
+        </nav>
+      </Container>
       <ScrollLink to="home" smooth={true} duration={500} className="top">
-        <img src={UpArrow} alt="Ir arriba" />
+        <img style={arrowStyle} src={UpArrow} alt="Ir arriba" />
       </ScrollLink>
-    </Container>
+    </>
   );
 };
 

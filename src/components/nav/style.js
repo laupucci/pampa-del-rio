@@ -18,7 +18,7 @@ export const Container = styled.header`
     font-size: 1.5rem;
     font-family: "Julius Sans One";
     color: ${whitish};
-    padding: 1rem;
+    /* padding: 1rem; */
   }
 
   .menu_open,
@@ -42,21 +42,9 @@ export const Container = styled.header`
     }
   }
 
-  .top img {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    width: 10vw;
-    max-width: 50px;
-    height: 10vw;
-    max-height: 50px;
-    display: ${({ active }) => (active ? "block" : "none")};
-    cursor: pointer;
-  }
-
   @media screen and (max-width: 900px) {
     width: 100vw;
-    padding: 0;
+    padding: 2rem;
     justify-content: space-between;
 
     .logo {
@@ -68,8 +56,8 @@ export const Container = styled.header`
       width: 1.5rem;
       height: 1.5rem;
       position: absolute;
-      top: 1rem;
-      right: 1.5rem;
+      top: 3vh;
+      right: 12vw;
       z-index: 11;
       cursor: pointer;
     }
@@ -106,7 +94,7 @@ export const Container = styled.header`
         }
         p {
           text-align: center;
-          font-size: 6vw;
+          font-size: 1.5rem;
         }
       }
     }
