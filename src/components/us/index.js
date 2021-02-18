@@ -6,8 +6,8 @@ import comp from "../../media/Compass.svg";
 import turn from "../../media/Turn.svg";
 import { Cta } from "../utils";
 
-export default function Us(params) {
- 
+export default function Us() {
+
   return (
     <UsContainer id="nosotros">
       <div className="nosotros">
@@ -41,7 +41,7 @@ export default function Us(params) {
           </p>
         </div>
       </div>
-      { params?.location?.params ? <></> :
+      { window.location.pathname === '/nosotros' ? <></> :
       <Cta text="UBICACIÓN Y CONTACTO" to="contacto" />}
     </UsContainer>
   );

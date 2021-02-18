@@ -6,7 +6,6 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
-  const comeFromInfo = true
 
   const handleScroll = () => {
     const scroll = window.scrollY;
@@ -36,7 +35,7 @@ const Navbar = () => {
         <ScrollLink to="nosotros" smooth={true} duration={600}>
           <p className="p2">Quiénes Somos?</p>
         </ScrollLink> :
-        <Link to={{ pathname:`/nosotros`, params: comeFromInfo }}>
+        <Link to={{ pathname:`/nosotros` }}>
           <p className="p2">Quiénes Somos?</p>
         </Link>}
         { window.location.pathname === '/' ?
