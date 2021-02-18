@@ -16,14 +16,12 @@ export const ContactContainer = styled.section`
 
   .map {
     grid-area: map;
-    background: #e4e4e4;
+    background-color: rgba(163, 189, 49, 0.4);
     border-radius: 10px;
-    .mapElement {
-      border-radius: 10px;
       height: 100%;
       width: 100%;
     }
-  }
+  
 
   .contact_form {
     grid-area: form;
@@ -136,27 +134,86 @@ export const ContactContainer = styled.section`
       grid-area: msg;
     }
   }
+
+  @media (max-width: 900px) {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: (1fr, 1fr);
+    margin: 0 auto;
+    grid-template:
+      "map" 1fr
+      "form" 1fr;
+
+    .map {
+    height: 70%;
+      width: 70%;
+      margin: 0% 15%;
+      margin-top: 10.5%;
+      margin-bottom: 3%
+  }
+
+  .contact_form {
+    margin-bottom: 1%;
+
+    .title {
+      padding: 2%;
+      width: 65vw;
+
+      h2 {
+        font-size: 4vw;
+      }
+    }
+    .form_container {
+      width: 65vw;
+      padding: 3%;
+      grid-gap: 4%;
+    }
+
+    label {
+      font-size: 2vw;
+      padding-bottom: 0.5vw;
+    }
+    .input {
+      width: 100%;
+      height: 5vh;
+      padding: 1.5vw;
+    }
+    .error {
+      font-size: 1vw;
+    }
+
+    .submit_btn {
+      padding: 0.5vw;
+    }
+
+  }
+  }
+
+
   @media (max-width: 500px) {
     display: grid;
     height: 100vh;
     width: 100vw;
-    margin: 0 auto;
-    grid-template-columns: (1fr, 1fr);
+    grid-template-columns: (1.2fr, 0.8fr);
     margin: 0 auto;
     grid-template:
-      "form" 1.2fr
-      "map" 0.8fr;
+      "map" 1.2fr
+      "form" 0.8fr;
+      grid-gap: 0;
     
-
     .map {
       grid-area: map;
       border-radius: 10px;
-      margin: 0 12%;
+      margin: 0% 12%;
+      margin-top: 17.5%;
+
     }
 
     .contact_form {
       .title {
-        padding: 3%;
+        padding: 2.5%;
+        margin: 0;
         width: 80vw;
 
         h2 {
@@ -165,20 +222,26 @@ export const ContactContainer = styled.section`
       }
       .form_container {
         width: 80vw;
-        height: 55%;
-        padding: 1.5%;
+        height: 75%;
+        padding: 0.5%;
         grid-gap: 0.85rem;
+        align-self: center;
+        justify-self: center;
+        
       }
 
       label {
         color: #272727;
         font-family: "Sanchez";
         font-size: 75%;
+        margin-left: 3%;
       }
       .input {
         height: 50%;
         font-size: 75%;
         padding: 3%;
+        width: 95%;
+        margin-left: 2%;
       }
       .error {
         font-size: 0.7rem;
@@ -186,8 +249,12 @@ export const ContactContainer = styled.section`
 
       .input.textarea {
         height: 65%;
+        width: 96.4%
       }
       }
-
+      .submit_btn {
+      padding: 0;
+      margin: 0;
+      }
     }
 `;
